@@ -1,130 +1,27 @@
-// alert ("Registrese o inicie sesión, por favor")
+/*VALIDACION INICIO */
+// D O M
+// Datos del usuario ya registrado anteriormente
+const usurioRegistradoEmail = "usuario@gmail.com"
+const usurioRegistradoContrasena = "usuario123"
+// busco por id los inputs y botones
+let email = document.getElementById("email")
+let contrasena = document.getElementById("contrasena")
+let iniciarSesionBoton = document.getElementById("iniciarSesion")
+let registrarse = document.getElementById("registrarse")
+let confirmarInicio = () => {
+    // guardamos el valor que escribió en el input el usuario, dentro de una variable
+        var emailRes = email.value;
+        var constrasenaRes = contrasena.value
+        // si coincide el valor escrito por el usuario con el valor del usuario ya registrado entonces se redirecciona a la página principal, sin, se manda un alert
+    if (emailRes == usurioRegistradoEmail && constrasenaRes=== usurioRegistradoContrasena) {
+        window.location.href = "./pagina_principal.html";
+    }
+    else {
+        alert("noooo amigo, te equivocaste, vuelve a casa")
+    }
+}
 
-// // V A R I A B L E S
-// var nombre
-// var contrasena
-// var gmail
-// function registrarse(){
-//     nombre = window.prompt("Ingrese su nombre")
-//     gmail = window.prompt("Ingrese su gmail")
-//     contrasena = window.prompt("Ingrese un contraseña")
-//     alert ("Te registraste con éxito.")
-// }
-// function iniciar_sesion(){
-//     let i_gmail = window.prompt("Ingrese su gmail")
-//     let i_contrasena = window.prompt("Ingrese su contraseña")
-//         if (i_gmail == gmail && i_contrasena == contrasena) {
-//             alert("Su gmail y/o contraseña son correctos owo")
-//             window.location.replace("./pagina_principal.html")
-//         } else {
-//             alert("Su gmail y/o contraseña son incorrectos.")
-// }
-// }
 
-// function chupetines(){
-//     let eleccion = window.confirm("Queres comprar los chupetines?")
-//      if (eleccion === true){
-//          let cantidad = window.prompt("Cuantos queres?")
-//          let precio = 30;
-//          let total = parseInt(cantidad) * precio;
-//          alert("Serian " + total + "$");
-//          alert("Gracias vuelvas prontos saluda")
-//      }
-//      else{
-//          alert("Gracias vuelvas prontos saluda")
-//      }
-//  }
-//  function algodon(){
-//      let eleccion = window.confirm("Queres comprar los algodones?")
-//       if (eleccion === true){
-//           let cantidad = window.prompt("Cuantos queres?")
-//           let precio = 50;
-//           let total = parseInt(cantidad) * precio;
-//           alert("Serian " + total + "$");
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//       else{
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//   }
-//   function paletas(){
-//      let eleccion = window.confirm("Queres comprar las paletas?")
-//       if (eleccion === true){
-//           let cantidad = window.prompt("Cuantas queres?")
-//           let precio = 25;
-//           let total = parseInt(cantidad) * precio;
-//           alert("Serian " + total + "$");
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//       else{
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//   }
-//   function caramelos(){
-//      let eleccion = window.confirm("Queres comprar los caramelos?")
-//       if (eleccion === true){
-//           let cantidad = window.prompt("Cuantos queres?")
-//           let precio = 10;
-//           let total = parseInt(cantidad) * precio;
-//           alert("Serian " + total + "$");
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//       else{
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//   }
-//   function rosquillas(){
-//      let eleccion = window.confirm("Queres comprar las rosquillas?")
-//       if (eleccion === true){
-//           let cantidad = window.prompt("Cuantas queres?")
-//           let precio = 70;
-//           let total = parseInt(cantidad) * precio;
-//           alert("Serian " + total + "$");
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//       else{
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//   }
-//   function cereal(){
-//      let eleccion = window.confirm("Queres comprar el cereal?")
-//       if (eleccion === true){
-//           let cantidad = window.prompt("Cuantos queres?")
-//           let precio = 355;
-//           let total = parseInt(cantidad) * precio;
-//           alert("Serian " + total + "$");
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//       else{
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//   }
-//   function waffles(){
-//      let eleccion = window.confirm("Queres comprar los waffles?")
-//       if (eleccion === true){
-//           let cantidad = window.prompt("Cuantos queres?")
-//           let precio = 150;
-//           let total = parseInt(cantidad) * precio;
-//           alert("Serian " + total + "$");
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//       else{
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//   }
-//   function squisher(){
-//      let eleccion = window.confirm("Queres comprar la legendaria Squisher?")
-//       if (eleccion === true){
-//           let cantidad = window.prompt("Cuantas queres?")
-//           let precio = 250;
-//           let total = parseInt(cantidad) * precio;
-//           alert("Serian " + total + "$");
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//       else{
-//           alert("Gracias vuelvas prontos saluda")
-//       }
-//   }
 
 /* INICIO DE CARRITO */
 
