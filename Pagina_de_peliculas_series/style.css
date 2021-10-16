@@ -276,6 +276,15 @@ div{
 .decoration2{
  text-align: center;
 }
+
+.decoration3{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #f0f571;
+  background-color:#2d1024;
+  }
+
 div > ul >li{
   font-family: monospace, serif;
 }
@@ -343,4 +352,18 @@ div > ul >li{
 @font-face{
   font-family:"Starmap";
   src: url("./Fuentes/00TT.TTF");
+}
+
+/* SCROLLBAR */
+
+.contenedor {
+  margin: 2rem auto;
+  border: 1px solid #aaa;
+  height: 300px;
+  width:90%;
+  max-width: 400px;
+  background: #f1f2f3;
+  overflow:auto;
+  box-sizing: border-box;
+  padding:0 1rem;
 }
