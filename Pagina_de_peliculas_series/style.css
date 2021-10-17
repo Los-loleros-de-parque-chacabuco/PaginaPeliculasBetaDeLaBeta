@@ -5,8 +5,6 @@
 HEAD
 html, body {
    background-color: #2f1125;
-   font-family: monospace, serif;
-   
 }
 /*
 PALETA DE COLORES
@@ -15,9 +13,16 @@ PALETA DE COLORES
 #E6A3A1 (Color secundario)
 #994F4D (Color secundario)
 */
-
- .container-fluid {
+.container-fluid {
    height: 150px;
+ }
+
+ .decoration3{
+   color: #f0f571;
+   font-family: "Starmap";
+   background-color: #2f1125;
+   justify-content: center;
+   display: flex;
  }
 
  .biografia {
