@@ -381,3 +381,28 @@ div > ul >li{
   font-family:"Starmap";
   src: url("./Fuentes/00TT.TTF");
 }
+
+
+.tamaño{
+  display: flex;
+  margin-left:230px ;
+  width:70%;
+  margin-left:250px ;
+ }
+ .fondoCarrucel{
+  background-color:#57374c;
+  text-align: center;
+  color: #F0F571;
+ }
+ .tamaño2{
+  display: flex;
+  margin-left:230px ;
+  width:90%;
+  margin-left: 75px;
+ }
+ .fondoCarrucel2{
+  background-color:#57374c;
+  margin-top:15px;
+  text-align: center;
+  color: #F0F571;
+ }
