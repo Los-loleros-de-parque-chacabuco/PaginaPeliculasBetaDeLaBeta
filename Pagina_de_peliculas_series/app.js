@@ -1,4 +1,5 @@
 /*VALIDACION INICIO */
+
 // D O M
 
 // Datos del usuario ya registrado anteriormente
@@ -9,14 +10,19 @@ const usurioRegistradoContrasena = "usuario123"
 let email = document.getElementById("email")
 let contrasena = document.getElementById("contrasena")
 let iniciarSesionBoton = document.getElementById("iniciarSesion")
-let registrarse = document.getElementById("registrarse")
+let registrarseBoton = document.getElementById("registrarseBoton")
+let emailRegistro = document.getElementById("emailRegistro")
+let contrasenaRegistro = document.getElementById("contrasenaRegistro")
+let contrasenaRegistroConfirmar = document.getElementById("contrasenaRegistroConfirmar")
+
+// Inicio de sesión
 
 let confirmarInicio = () => {
     // guardamos el valor que escribió en el input el usuario, dentro de una variable
-        var emailRes = email.value;
-        var constrasenaRes = contrasena.value
-        // si coincide el valor escrito por el usuario con el valor del usuario ya registrado entonces se redirecciona a la página principal, sin, se manda un alert
-    if (emailRes == usurioRegistradoEmail && constrasenaRes=== usurioRegistradoContrasena) {
+    var emailRes = email.value;
+    var constrasenaRes = contrasena.value
+    // si coincide el valor escrito por el usuario con el valor del usuario ya registrado entonces se redirecciona a la página principal, sin, se manda un alert
+    if (emailRes == usurioRegistradoEmail && constrasenaRes === usurioRegistradoContrasena) {
         window.location.href = "./pagina_principal.html";
     }
     else {
@@ -24,8 +30,50 @@ let confirmarInicio = () => {
     }
 }
 
-iniciarSesionBoton.onclick= ()=>{
-confirmarInicio()
+if (iniciarSesionBoton === null) {
+    console.log("inciar sesión es null")
+} else {
+    iniciarSesionBoton.onclick = () => {
+        confirmarInicio()
+    }
+}
+
+
+// Registrarse
+
+let usuarioRegistrado
+let contrasenaConfirmada = false;
+
+let registrarse = () => {
+    console.log("estoy dentro de registrarse")
+
+    var emailRegistroRes = emailRegistro.value;
+    var contrasenaRegistroRes = contrasenaRegistro.value;
+    var contrasenaRegistroConfirmarRes = contrasenaRegistroConfirmar.value;
+
+    if (contrasenaRegistroRes === contrasenaRegistroConfirmarRes) {
+        contrasenaConfirmada = true;
+        console.log(contrasenaConfirmada)
+    }
+
+    if (emailRegistroRes) {
+        usuarioRegistrado = emailRegistro;
+        window.location.href = "./pagina_principal.html";
+    }
+    else if (emailRegistroRes === usuarioRegistrado) {
+        alert("Este usuario ya ha sido registrado");
+    }
+    else {
+        alert("Uno de los datos estan equivocados")
+    }
+}
+
+if (registrarseBoton === null) {
+    console.log("registrarse es null")
+} else {
+    registrarseBoton.onclick = () => {
+        registrarse()
+    }
 }
 
 /* INICIO DE CARRITO */
@@ -88,6 +136,9 @@ const Series = [
     'Peaky Blinders'
 ]
 let factura = 0
+
+let carritoDeCompra
+
 function carritoCompra() {
     var eleccion = confirm("Que desea comprar:\n Peliculas (Clickear Aceptar)\n Series (Clickear Cancelar")
     if (eleccion === true) {
