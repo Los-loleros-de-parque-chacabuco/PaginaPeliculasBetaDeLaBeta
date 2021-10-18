@@ -1,13 +1,16 @@
 /*VALIDACION INICIO */
 // D O M
+
 // Datos del usuario ya registrado anteriormente
 const usurioRegistradoEmail = "usuario@gmail.com"
 const usurioRegistradoContrasena = "usuario123"
+
 // busco por id los inputs y botones
 let email = document.getElementById("email")
 let contrasena = document.getElementById("contrasena")
 let iniciarSesionBoton = document.getElementById("iniciarSesion")
 let registrarse = document.getElementById("registrarse")
+
 let confirmarInicio = () => {
     // guardamos el valor que escribió en el input el usuario, dentro de una variable
         var emailRes = email.value;
@@ -21,7 +24,9 @@ let confirmarInicio = () => {
     }
 }
 
-
+iniciarSesionBoton.onclick= ()=>{
+confirmarInicio()
+}
 
 /* INICIO DE CARRITO */
 
